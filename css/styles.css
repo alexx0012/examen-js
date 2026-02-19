@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --bg: #f8f9ca;
+  --card: #ffffff;
+  --text: #1a1a2e;
+  --primary: #1a5f7a;
+  --error: #9b2335;
+  --success: #2d6a4f;
+  --focus: #f9d423;
+  --error-bg: rgba(155, 35, 53, 0.1);
+  --success-bg: rgba(45, 106, 79, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
+.container {
+  max-width: 600px;
+  margin: 2% auto;
+}
+
+header {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/fondo.jpg");
+  filter: blur(2px);
+  z-index: -1;
+}
+
+h1 {
+  text-align: center;
+  color: var(--card);
+  text-shadow: 2px 2px 2px var(--primary);
+  margin: auto;
+  font-size: 1.7rem;
+  padding: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+section {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border: 4px solid var(--success-bg);
+}
+
+h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.required {
+  color: var(--error);
+  margin-left: 0.2rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 4px solid var(--success-bg);
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 1px 1px 1px var(--primary);
+}
+
+.error {
+  color: var(--error);
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  display: none;
+  font-weight: 600;
+}
+
+.error.show {
+  display: block;
+}
+
+.counter {
+  text-align: right;
+  font-size: 1rem;
+  color: var(--primary);
+  margin-top: 0.5rem;
+}
+
+button {
+  background: var(--primary);
+  color: var(--card);
+  border: 3px solid transparent;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  min-height: 48px;
+  min-width: 48px;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+button:focus {
+  outline: none;
+  border-color: var(--focus);
+  box-shadow: 0 0 0 4px var(--focus);
+}
+
+#btn-color:hover {
+  background: var(--success);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+#btn-color {
+  background: var(--primary);
+}
+
+.click-box {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary);
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--bg);
+  border-radius: 8px;
+}
+
+.box-title {
+  margin-bottom: 1rem;
+  color: var(--text);
+  background-color: var(--focus);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.interactive {
+  height: 120px;
+  background: var(--primary);
+  color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border: 4px solid transparent;
+  transition: all 0.2s;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  border: 0;
+}
+
+.status {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  display: none;
+}
+
+.status.show {
+  display: block;
+}
+
+.status.success {
+  background: var(--success-bg);
+  color: var(--success);
+  border: 2px solid var(--success);
+}
+
+.status.error {
+  background: var(--error-bg);
+  color: var(--error);
+  border: 2px solid var(--error);
+}
+
+footer {
+  text-align: center;
+  margin: 1rem auto;
+  padding: 1rem;
+  background: var(--primary);
+  border-radius: 8px;
+  color: var(--card);
+  font-size: 1.3rem;
+  font-weight: 600;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Media Queries */
+@media (max-width: 480px) {
+  body {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    padding: 0.3rem;
+  }
+
+  section {
+    padding: 1rem;
+    border-width: 2px;
+  }
+
+  button {
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+  }
+
+  .interactive {
+    font-size: 1rem;
+    height: 100px;
+  }
+
+  .box-title {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .click-box {
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+}
