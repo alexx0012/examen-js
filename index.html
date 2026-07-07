@@ -114,7 +114,7 @@
       <section aria-labelledby="pulse-title">
         <h2 id="pulse-title">Pulsar unha tecla</h2>
 
-        <label for="teclado"> </label>
+        <label for="teclado" class="sr-only">Escribe ou pulsa unha tecla</label>
         <input id="teclado" type="text" placeholder="Pulsa unha tecla" />
 
         <div class="click-box" aria-live="polite" aria-atomic="true">
@@ -128,18 +128,17 @@
 
       <!-- Caixa -->
       <section aria-labelledby="box-title">
-        <h2 id="box-title">
-          Caixa Interactiva.Si apasas por riva ponse vermella.
-        </h2>
+        <h2 id="box-title">Caixa interactiva</h2>
+        <p class="box-title">Pasa por riba e a caixa cambiará de cor.</p>
         <div
           class="interactive"
           id="caixa"
           tabindex="0"
           role="button"
-          aria-label="Caixa interactiva o pasar por riba"
+          aria-label="Caixa interactiva que cambia de cor ao pasar por riba"
           aria-pressed="false"
         >
-          <p class="box-title">Pasa por riba</p>
+          <p>Pasa por riba</p>
         </div>
       </section>
     </main>
